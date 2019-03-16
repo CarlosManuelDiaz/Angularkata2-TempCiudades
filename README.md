@@ -1,3 +1,13 @@
+
+1. Añadir un input y un botón en nuestro componente padre
+2. Crear una clase Ciudad con atributo nombre y temperatura
+3. Creamos una lista de ciudades en nuestro componente padre
+4. Al hacer click en el botón añade una nueva ciudad con una temperatura de 20 grados
+5. Muestra la lista de ciudades en el componente padre
+6. Generar un servicio temperatura que devuelva una temperatura aleatoria al añadir una ciudad
+
+
+
 # Kata2Temperaturas
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
