@@ -1,11 +1,31 @@
-Ciudad: <input #miCiudad/>
-<br/>
-<button (click)="agregarCiudad(miCiudad.value)">Añadir</button>
-
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-12 text-right text-hide">
+      <div class="input-group flex-nowrap">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="addon-wrapping">Ciudad:</span>
+        </div>
+        <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+          aria-describedby="addon-wrapping" #miCiudad>
+        <button class="btn btn-success" type="button" (click)="agregarCiudad(miCiudad.value)">Añadir</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-9">
 <div *ngFor="let ciudad of misciudades">
-<span class="nombre">{{ciudad.nombre}}</span>
-<span class="valor">{{ciudad.temperatura.valor}}</span>
-<span class="tipo">{{ciudad.temperatura.tipo}}</span>
+    <ul class="list-group list-group-vertical">
+        <li class="list-group-item">{{ciudad.nombre}}</li>
+        <li class="list-group-item">{{ciudad.temperatura.valor}} {{ciudad.temperatura.tipo}}</li>
+        
+      </ul>
+    </div>
+</div>
+</div>
 </div>
 
 <router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Ciudad } from './ciudad';
+import { TemperaturaService } from './temperatura.service';
 
 @Component({
   selector: 'app-root',
@@ -9,13 +10,15 @@ import { Ciudad } from './ciudad';
 export class AppComponent {
   title = 'kata2-temperaturas';
 
-public misciudades: Array<Ciudad> = [];
+  constructor(private temperaturaservice: TemperaturaService) {}
+
+  public misciudades: Array<Ciudad> = [];
 
 public agregarCiudad(nombre: string): void {
   this.misciudades.push({
     nombre,
     temperatura: {
-      valor: 20,
+      valor: this.temperaturaservice.obtenerTemperatura(),
       tipo: 'ºC'
     }
 

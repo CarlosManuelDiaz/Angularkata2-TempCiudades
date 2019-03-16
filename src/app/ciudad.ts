@@ -1,7 +1,7 @@
 export class Ciudad {
     nombre: string;
     temperatura: {
-        valor: 20;
+        valor: number,
         tipo: string;
     };
 }
